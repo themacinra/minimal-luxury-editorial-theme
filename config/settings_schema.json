@@ -1,0 +1,329 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "Minimal Luxury Editorial",
+    "theme_author": "Minimal Luxury"
+  },
+  {
+    "name": "Color Settings",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Color Palette"
+      },
+      {
+        "type": "color",
+        "id": "color_bg_primary",
+        "label": "Primary Background",
+        "default": "#F7F6F2"
+      },
+      {
+        "type": "color",
+        "id": "color_text_primary",
+        "label": "Primary Text",
+        "default": "#171717"
+      },
+      {
+        "type": "color",
+        "id": "color_text_secondary",
+        "label": "Secondary Text",
+        "default": "#77736D"
+      },
+      {
+        "type": "color",
+        "id": "color_border",
+        "label": "Border Color",
+        "default": "#D9D7D0"
+      },
+      {
+        "type": "color",
+        "id": "color_accent",
+        "label": "Accent Color",
+        "default": "#171717"
+      }
+    ]
+  },
+  {
+    "name": "Typography",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Font Settings"
+      },
+      {
+        "type": "font_picker",
+        "id": "font_heading",
+        "label": "Heading Font",
+        "default": "helvetica_neue_n4"
+      },
+      {
+        "type": "font_picker",
+        "id": "font_body",
+        "label": "Body Font",
+        "default": "helvetica_neue_n4"
+      },
+      {
+        "type": "range",
+        "id": "font_scale",
+        "min": 0.8,
+        "max": 1.3,
+        "step": 0.1,
+        "unit": "x",
+        "label": "Font Size Scale",
+        "default": 1.0
+      }
+    ]
+  },
+  {
+    "name": "Header",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Header Settings"
+      },
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logo"
+      },
+      {
+        "type": "range",
+        "id": "logo_width",
+        "min": 50,
+        "max": 300,
+        "step": 10,
+        "unit": "px",
+        "label": "Logo Width",
+        "default": 120
+      },
+      {
+        "type": "text",
+        "id": "store_name",
+        "label": "Store Name (if no logo)",
+        "default": "Minimal Luxury"
+      },
+      {
+        "type": "link_list",
+        "id": "main_nav",
+        "label": "Main Navigation"
+      },
+      {
+        "type": "checkbox",
+        "id": "header_sticky",
+        "label": "Sticky Header",
+        "default": true
+      },
+      {
+        "type": "range",
+        "id": "header_padding",
+        "min": 1,
+        "max": 4,
+        "step": 0.5,
+        "unit": "rem",
+        "label": "Header Padding",
+        "default": 2
+      }
+    ]
+  },
+  {
+    "name": "Hero Section",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Hero Settings"
+      },
+      {
+        "type": "image_picker",
+        "id": "hero_image",
+        "label": "Hero Image"
+      },
+      {
+        "type": "text",
+        "id": "hero_eyebrow",
+        "label": "Eyebrow Text",
+        "default": "A QUIET STATEMENT"
+      },
+      {
+        "type": "text",
+        "id": "hero_heading",
+        "label": "Hero Heading",
+        "default": "Scent, distilled."
+      },
+      {
+        "type": "textarea",
+        "id": "hero_description",
+        "label": "Hero Description",
+        "default": "Minimal compositions designed to stay close to the skin."
+      },
+      {
+        "type": "text",
+        "id": "hero_button_text",
+        "label": "Button Text",
+        "default": "Discover"
+      },
+      {
+        "type": "url",
+        "id": "hero_button_url",
+        "label": "Button URL"
+      },
+      {
+        "type": "select",
+        "id": "hero_text_align",
+        "label": "Text Position",
+        "options": [
+          { "value": "left", "label": "Left" },
+          { "value": "right", "label": "Right" }
+        ],
+        "default": "right"
+      }
+    ]
+  },
+  {
+    "name": "Featured Collection",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Featured Collection"
+      },
+      {
+        "type": "collection",
+        "id": "featured_collection",
+        "label": "Collection"
+      },
+      {
+        "type": "range",
+        "id": "featured_products_limit",
+        "min": 4,
+        "max": 12,
+        "step": 1,
+        "label": "Number of Products",
+        "default": 8
+      },
+      {
+        "type": "range",
+        "id": "featured_product_columns",
+        "min": 2,
+        "max": 4,
+        "step": 1,
+        "label": "Columns (Desktop)",
+        "default": 4
+      }
+    ]
+  },
+  {
+    "name": "Editorial Section",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Editorial / Manifesto"
+      },
+      {
+        "type": "text",
+        "id": "editorial_eyebrow",
+        "label": "Eyebrow Text",
+        "default": "OUR APPROACH"
+      },
+      {
+        "type": "text",
+        "id": "editorial_heading",
+        "label": "Heading",
+        "default": "Less, but more memorable."
+      },
+      {
+        "type": "textarea",
+        "id": "editorial_body",
+        "label": "Body Text",
+        "default": "Modern fragrance built around clarity, texture and presence."
+      }
+    ]
+  },
+  {
+    "name": "Footer",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Footer Settings"
+      },
+      {
+        "type": "text",
+        "id": "footer_tagline",
+        "label": "Brand Tagline",
+        "default": "Contemporary fragrance for the discerning."
+      },
+      {
+        "type": "link_list",
+        "id": "footer_nav",
+        "label": "Footer Navigation"
+      },
+      {
+        "type": "header",
+        "content": "Social Links"
+      },
+      {
+        "type": "text",
+        "id": "social_instagram",
+        "label": "Instagram URL"
+      },
+      {
+        "type": "text",
+        "id": "social_facebook",
+        "label": "Facebook URL"
+      },
+      {
+        "type": "text",
+        "id": "social_twitter",
+        "label": "Twitter URL"
+      },
+      {
+        "type": "text",
+        "id": "social_pinterest",
+        "label": "Pinterest URL"
+      },
+      {
+        "type": "header",
+        "content": "Newsletter"
+      },
+      {
+        "type": "text",
+        "id": "newsletter_heading",
+        "label": "Newsletter Heading",
+        "default": "Stay Informed"
+      },
+      {
+        "type": "text",
+        "id": "newsletter_description",
+        "label": "Newsletter Description",
+        "default": "Subscribe for new releases and editorial content."
+      }
+    ]
+  },
+  {
+    "name": "Spacing & Layout",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Spacing"
+      },
+      {
+        "type": "range",
+        "id": "section_spacing",
+        "min": 2,
+        "max": 8,
+        "step": 1,
+        "unit": "rem",
+        "label": "Section Spacing",
+        "default": 6
+      },
+      {
+        "type": "range",
+        "id": "grid_gap",
+        "min": 1,
+        "max": 3,
+        "step": 0.5,
+        "unit": "rem",
+        "label": "Grid Gap",
+        "default": 2
+      }
+    ]
+  }
+]
