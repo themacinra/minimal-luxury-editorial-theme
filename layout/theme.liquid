@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="{{ settings.color_text_primary }}">
+    
+    <title>{{ page_title }}{% if page_title and shop.name %} — {% endif %}{{ shop.name }}</title>
+    <meta name="description" content="{{ page_description | escape }}">
+    
+    {% if canonical_url %}
+      <link rel="canonical" href="{{ canonical_url }}">
+    {% endif %}
+
+    <link rel="preconnect" href="https://cdn.shopify.com">
+    <link rel="dns-prefetch" href="https://cdn.shopify.com">
+
+    {{ content_for_header }}
+
+    <link rel="stylesheet" href="{{ 'base.css' | asset_url }}">
+    <link rel="stylesheet" href="{{ 'header.css' | asset_url }}">
+    <link rel="stylesheet" href="{{ 'footer.css' | asset_url }}">
+    <link rel="stylesheet" href="{{ 'product-grid.css' | asset_url }}">
+    <link rel="stylesheet" href="{{ 'cart.css' | asset_url }}">
+
+    <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
+
+    <style>
+      :root {
+        --color-bg-primary: {{ settings.color_bg_primary }};
+        --color-text-primary: {{ settings.color_text_primary }};
+        --color-text-secondary: {{ settings.color_text_secondary }};
+        --color-border: {{ settings.color_border }};
+        --color-accent: {{ settings.color_accent }};
+        
+        --font-heading: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+        --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+        
+        --font-scale: {{ settings.font_scale }};
+        --header-padding: {{ settings.header_padding }}rem;
+        --section-spacing: {{ settings.section_spacing }}rem;
+        --grid-gap: {{ settings.grid_gap }}rem;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="template-{{ template | replace: '.', ' ' | truncatewords: 1, '' }}" data-template="{{ template }}">
+    <a href="#main" class="skip-to-content">Skip to content</a>
+
+    {% section 'header' %}
+
+    <main id="main" role="main">
+      {{ content_for_layout }}
+    </main>
+
+    {% section 'footer' %}
+
+    <div id="cart-drawer" class="cart-drawer" aria-hidden="true" role="region" aria-label="Shopping cart">
+      <div class="cart-drawer__content">
+        <div class="cart-drawer__header">
+          <h2 class="cart-drawer__title">Cart</h2>
+          <button class="cart-drawer__close" aria-label="Close cart">
+            <span class="icon-close"></span>
+          </button>
+        </div>
+        <div class="cart-drawer__items" id="cart-drawer-items"></div>
+        <div class="cart-drawer__footer">
+          <div class="cart-drawer__subtotal">
+            <span>Subtotal:</span>
+            <span id="cart-subtotal">$0.00</span>
+          </div>
+          <button class="cart-drawer__checkout" id="cart-checkout-btn">
+            Proceed to Checkout
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
+  </body>
+</html>
